@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="row">
+    <h1 class="text-primary text-center mt-3">Users Details</h1>
+    <button class="btn btn-primary" (click)=randomUser()>Random User</button>
+  </div>
+</div>
+<!-- <pre>{{users | json}}</pre> -->
+<div class="container-fluid">
+  <div  class="row m-3 bg-light p-3">
+    <table [ngStyle]="{'background-color':color}" class="table">
+      <thead>
+        <tr>
+          <th scope="col">id</th>
+          <th scope="col">Firstname</th>
+          <th scope="col">Lastname</th>
+          <th scope="col">Age</th>
+          <th scope="col">image</th>
+          <th scope="col">phone</th>
+          <th scope="col">gender</th>
+          <th scope="col">email</th>
+          <th scope="col"> birthDate</th>
+      </thead>
+      <tbody>
+        <tr >
+          <th>{{user.id}}</th>
+          <td>{{user.firstName}}</td>
+          <td>{{user.lastName}}</td>
+          <td>{{user.age}}</td>
+          <td><img [src]="user.image" alt=""></td>
+          <td>{{user.phone}}</td>
+          <td>{{user.gender}}</td>
+          <td>{{user.email}}</td>
+          <td>{{user.birthDate}}</td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+</div>
